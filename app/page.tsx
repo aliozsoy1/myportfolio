@@ -141,61 +141,63 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#fafafa]">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center bg-gradient-to-b from-primary/10 to-background">
-        <div className="container px-4 mx-auto grid md:grid-cols-2 gap-8 items-center">
-          {/* Sol taraf - Metin içeriği */}
-          <motion.div 
-            className="text-left"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 py-3">
-              Ali Özsoy
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-              Frontend Developer
-            </p>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              Frontend geliştirici olarak modern web teknolojileri konusunda uzmanlaşmış durumdayım. 
-              React ve Next.js ekosisteminde güçlü bir tecrübeye sahibim. Aynı zamanda WordPress 
-              ile içerik yönetim sistemleri geliştiriyor, React Native ile mobil uygulamalar 
-              oluşturuyorum.
-            </p>
-            <div className="flex gap-4">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#contact" className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition">
-                  İletişime Geç
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#projects" className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition">
-                  Projelerimi Gör
-                </Link>
-              </motion.div>
-            </div>
-          </motion.div>
+      <section className="relative min-h-screen flex items-center bg-gradient-to-b from-primary/10 to-background py-20 md:py-0">
+        <div className="container px-4 mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Sol taraf - Metin içeriği */}
+            <motion.div 
+              className="text-left order-2 md:order-1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-3xl md:text-6xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 py-3">
+                Ali Özsoy
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground mb-4">
+                Frontend Developer
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-8">
+                Frontend geliştirici olarak modern web teknolojileri konusunda uzmanlaşmış durumdayım. 
+                React ve Next.js ekosisteminde güçlü bir tecrübeye sahibim. Aynı zamanda WordPress 
+                ile içerik yönetim sistemleri geliştiriyor, React Native ile mobil uygulamalar 
+                oluşturuyorum.
+              </p>
+              <div className="flex gap-4">
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link href="#contact" className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition">
+                    İletişime Geç
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link href="#projects" className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition">
+                    Projelerimi Gör
+                  </Link>
+                </motion.div>
+              </div>
+            </motion.div>
 
-          {/* Sağ taraf - Görsel */}
-          <motion.div 
-            className="relative h-[500px] rounded-2xl overflow-hidden"
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Image
-              src="/images/slider-bg.webp"
-              alt="Hero Image"
-              fill
-              className="object-cover"
-              priority
-            />
-          </motion.div>
+            {/* Sağ taraf - Görsel */}
+            <motion.div 
+              className="relative h-[300px] md:h-[500px] rounded-2xl overflow-hidden order-1 md:order-2"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <Image
+                src="/images/slider-bg.webp"
+                alt="Hero Image"
+                fill
+                className="object-cover"
+                priority
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Sliding Tech Stack */}
-      <div className="py-10 bg-background/50 relative">
+      <div className="py-10 bg-background/50 relative w-full overflow-x-hidden">
         <div className="container mx-auto px-4 overflow-hidden relative">
           {/* Gradient Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background/80 to-transparent z-10" />
@@ -219,10 +221,10 @@ export default function Home() {
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center gap-2 p-4 bg-background/50 rounded-lg min-w-[100px]"
+                  className="flex flex-col items-center justify-center gap-2 p-4 bg-background/50 rounded-lg min-w-[80px] md:min-w-[100px]"
                 >
-                  <tech.icon className="w-10 h-10 text-primary" />
-                  <span className="text-sm font-medium text-center">{tech.name}</span>
+                  <tech.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                  <span className="text-xs md:text-sm font-medium text-center">{tech.name}</span>
                 </div>
               ))}
             </motion.div>
