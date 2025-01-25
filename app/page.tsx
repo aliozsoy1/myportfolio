@@ -197,15 +197,15 @@ export default function Home() {
       </section>
 
       {/* Sliding Tech Stack */}
-      <div className="py-10 bg-background/50 relative w-full overflow-hidden">
-        <div className="container mx-auto px-4 relative">
+      <div className="py-10 bg-background/50 relative w-full overflow-x-hidden">
+        <div className="container mx-auto px-4 overflow-hidden relative">
           {/* Gradient Masks */}
           <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background/80 to-transparent z-10" />
           <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background/80 to-transparent z-10" />
           
           <div className="flex justify-center">
             <motion.div 
-              className="flex gap-4 md:gap-8"
+              className="flex gap-8"
               animate={{
                 x: [0, -1000],
               }}
@@ -217,15 +217,14 @@ export default function Home() {
                   ease: "linear",
                 },
               }}
-              style={{ maxWidth: '100vw' }}
             >
               {[...techStack, ...techStack].map((tech, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-center justify-center gap-1 md:gap-2 p-2 md:p-4 bg-background/50 rounded-lg min-w-[70px] md:min-w-[100px]"
+                  className="flex flex-col items-center justify-center gap-2 p-4 bg-background/50 rounded-lg min-w-[80px] md:min-w-[100px]"
                 >
-                  <tech.icon className="w-6 h-6 md:w-10 md:h-10 text-primary" />
-                  <span className="text-[10px] md:text-sm font-medium text-center">{tech.name}</span>
+                  <tech.icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
+                  <span className="text-xs md:text-sm font-medium text-center">{tech.name}</span>
                 </div>
               ))}
             </motion.div>
@@ -245,11 +244,11 @@ export default function Home() {
             Hakkımda
           </motion.h2>
           <div className="grid md:grid-cols-2 gap-12">
-            {/* Sol taraf - Eğitim ve Deneyim (Eski sağ taraf) */}
+            {/* Sol taraf - Eğitim ve Deneyim */}
             <motion.div
               className="space-y-8"
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               {/* Eğitim */}
@@ -327,17 +326,17 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Sağ taraf - Makaleler (Eski sol taraf) */}
+            {/* Sağ taraf - Makaleler */}
             <motion.div
-              className="space-y-8 px-2 md:px-0"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="space-y-8"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               <h3 className="text-2xl font-semibold mb-6">Makalelerim</h3>
               <div className="space-y-8">
                 {/* Makale 1 */}
-                <div className="space-y-4 bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div className="space-y-4">
                   <h4 className="text-xl font-semibold">Next.js ile Modern Web Uygulamaları</h4>
                   <p className="text-muted-foreground line-clamp-3">
                     Modern web uygulamalarının geliştirilmesinde Next.js'in sunduğu avantajlar ve best practice'ler hakkında detaylı bir inceleme...
@@ -351,7 +350,7 @@ export default function Home() {
                 </div>
 
                 {/* Makale 2 */}
-                <div className="space-y-4 bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div className="space-y-4">
                   <h4 className="text-xl font-semibold">React Performance Optimizasyonu</h4>
                   <p className="text-muted-foreground line-clamp-3">
                     React uygulamalarında performans optimizasyonu için kullanabileceğiniz teknikler ve pratik öneriler...
@@ -365,7 +364,7 @@ export default function Home() {
                 </div>
 
                 {/* Makale 3 */}
-                <div className="space-y-4 bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div className="space-y-4">
                   <h4 className="text-xl font-semibold">Tailwind CSS ile Modern UI Tasarımı</h4>
                   <p className="text-muted-foreground line-clamp-3">
                     Tailwind CSS kullanarak modern ve responsive kullanıcı arayüzleri nasıl tasarlanır...
@@ -379,7 +378,7 @@ export default function Home() {
                 </div>
 
                 {/* Makale 4 */}
-                <div className="space-y-4 bg-white p-4 md:p-6 rounded-lg shadow-sm">
+                <div className="space-y-4">
                   <h4 className="text-xl font-semibold">TypeScript ile Güvenli Kod Yazımı</h4>
                   <p className="text-muted-foreground line-clamp-3">
                     TypeScript'in sunduğu tip güvenliği ve modern JavaScript projelerinde nasıl daha güvenli kod yazabiliriz...
