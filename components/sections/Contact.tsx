@@ -11,7 +11,7 @@ export default function Contact() {
           <div className="grid md:grid-cols-3 gap-8">
             {/* GitHub */}
             <motion.a
-              href="https://github.com/yourusername"
+              href="https://github.com/aliozsoy1"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-6 rounded-lg bg-[#ffffff] hover:bg-primary/5 transition-all group"
@@ -28,7 +28,7 @@ export default function Contact() {
 
             {/* LinkedIn */}
             <motion.a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/ali-%C3%B6zsoy-33870986/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center p-6 rounded-lg bg-[#ffffff] hover:bg-primary/5 transition-all group"
@@ -45,7 +45,7 @@ export default function Contact() {
 
             {/* Email */}
             <motion.a
-              href="mailto:your@email.com"
+              href="mailto:aliozsoy237@gmail.com"
               className="flex flex-col items-center p-6 rounded-lg bg-[#ffffff] hover:bg-primary/5 transition-all group"
               whileHover={{ y: -5 }}
             >
