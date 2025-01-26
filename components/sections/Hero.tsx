@@ -24,20 +24,20 @@ export default function Hero() {
             <p className="text-muted-foreground leading-relaxed mb-8">
               Frontend Developer olarak, kullanıcı dostu ve etkileyici web uygulamaları geliştirme konusunda kendimi geliştiriyorum. HTML, CSS ve JavaScript ile modern frameworkler (React, Next.js React Native) kullanarak projeler üretiyorum. Şu an çalıştığım firmada WordPress ile geliştirmeler yapıyorum, ancak boş vakitlerimde React öğrenerek kendimi daha da ileri taşımaya çalışıyorum.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-2">
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#about" className="bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:opacity-90 transition">
+                <Link href="#about" className="bg-primary text-primary-foreground px-4 py-3 rounded-lg hover:opacity-90 transition">
                   Hakkımda
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#projects" className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition">
+                <Link href="#projects" className="border border-primary text-primary px-4 py-3 rounded-lg hover:bg-primary/10 transition">
                   Projelerim
                 </Link>
               </motion.div>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Link href="#contact" className="border border-primary text-primary px-6 py-3 rounded-lg hover:bg-primary/10 transition">
-                  İletişime Geç
+                <Link href="#contact" className="border border-primary text-primary px-4 py-3 rounded-lg hover:bg-primary/10 transition">
+                  İletişim
                 </Link>
               </motion.div>
             </div>
