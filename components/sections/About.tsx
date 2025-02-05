@@ -98,7 +98,7 @@ export default function About() {
                     <h4 className="text-xl font-semibold">{article.title}</h4>
                     <div className="flex items-center gap-4">
                       <span className="text-sm text-muted-foreground">
-                        {new Date(article.pubDate).toLocaleDateString()} • {calculateReadingTime(article.content)} dk okuma
+                        {new Date(article.pubDate).toLocaleDateString()} • <Link target="_blank" href="https://medium.com/@aliozsoy237">{article.author}</Link> • {calculateReadingTime(article.content)} dk okuma
                       </span>
                       <Link target="_blank" href={article.link} className="text-primary hover:underline text-sm font-medium">
                         Makaleyi İncele →

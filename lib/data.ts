@@ -17,30 +17,30 @@ export const techStackData = [
 
 export const projects = [
   {
-    title: "E-Ticaret Platformu",
-    description: "React ve Next.js kullanılarak geliştirilmiş modern bir e-ticaret platformu. Tailwind CSS ile responsive tasarım.",
-    tags: ["React", "Next.js", "Tailwind CSS"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    title: "Admin Panel Tasarımı",
+    description: "Next.js ile Figma'da bulunan Pickolab Studio'ya ait Nuegas admin panelinin tasarımını yaptım.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Chart.js"],
+    demoUrl: "https://aliozsoy1.github.io/next-admin-dashboard/",
+    githubUrl: "https://github.com/aliozsoy1/next-admin-dashboard"
   },
   {
-    title: "Blog Yönetim Sistemi",
-    description: "WordPress ve React entegrasyonu ile geliştirilmiş özel blog yönetim sistemi. SEO odaklı performans optimizasyonu.",
-    tags: ["WordPress", "React", "PHP"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    title: "Hava Durumu Uygulaması",
+    description: "React ile girilen şehre veya ilçeye göre hava durumunu gösteren uygulamayı yaptım.",
+    tags: ["React", "Vite", "Tailwind", "OpenWeatherMapApi"],
+    demoUrl: "https://aliozsoy1.github.io/weather-app-staj/",
+    githubUrl: "https://github.com/aliozsoy1/weather-app-staj"
   },
   {
-    title: "Mobil Fitness Uygulaması",
-    description: "React Native ile geliştirilmiş, kullanıcıların fitness hedeflerini takip edebileceği mobil uygulama.",
-    tags: ["React Native", "TypeScript", "Firebase"],
-    demoUrl: "https://demo.example.com",
-    githubUrl: "https://github.com/username/project"
+    title: "Kişisel Portfolio Sitem",
+    description: "Next.js ile kendi bilgilerimin, Medium makalelerimin ve projelerimin yayınlandığı portfolio sitesini yaptım.",
+    tags: ["React", "Next.js", "Tailwind"],
+    demoUrl: "https://myportfolio-tau-weld.vercel.app/",
+    githubUrl: "https://github.com/aliozsoy1/myportfolio"
   }
 ];
 
 export const fetchArticles = async () => {
-  const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40odayibasi');
+  const response = await fetch('https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40aliozsoy237');
   const data = await response.json();
   return data.items.slice(0, 7); // İlk 7 makaleyi alıyoruz
 };
